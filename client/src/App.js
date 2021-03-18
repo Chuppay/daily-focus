@@ -20,6 +20,7 @@ function App() {
                 <Route exact path="/home">
                     {/* Replace following component with actual Home component when created */}
                     <Header />
+                    <Body />
                 </Route>
             </Switch>
         </BrowserRouter>
