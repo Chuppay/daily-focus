@@ -1,10 +1,6 @@
 import { Grid, Paper, makeStyles } from "@material-ui/core";
 import SelectedWidgetsModal from "../SelectWidgetsModal";
 import styles from "./style.module.scss";
-import createPersistedState from "use-persisted-state";
-import { useEffect } from "react";
-
-const useWidgetState = createPersistedState("selectedWidgets");
 
 const useStyles = makeStyles({
     grid: {
@@ -16,9 +12,7 @@ const useStyles = makeStyles({
     },
 });
 
-function Body() {
-    const [selectedWidgets, setSelectedWidgets] = useWidgetState([]);
-
+function Body({ selectedWidgets, setSelectedWidgets }) {
     const classes = useStyles();
 
     return (
