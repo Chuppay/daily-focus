@@ -1,11 +1,10 @@
 .gridContainer {
-    flex-grow: 1;
-    width: 100%;
     height: 100%;
-    background-color: #F0F2F5;
+    padding: 30px;
+    background-color: #f0f2f5;
 }
 
-.noWidgetContainer{
+.noWidgetContainer {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -14,12 +13,12 @@
     transform: translate(-50%, -50%);
     text-align: center;
 
-    .message{
+    .message {
         font-size: 1.5rem;
-        color: #7D7D7D;
+        color: #7d7d7d;
     }
 
-    .addWidget{
+    .addWidget {
         margin-top: 15px;
         text-align: center;
     }
