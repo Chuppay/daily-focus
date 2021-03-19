@@ -19,11 +19,6 @@ const useStyles = makeStyles({
 function Body() {
     const [selectedWidgets, setSelectedWidgets] = useWidgetState([]);
 
-    useEffect(() => {
-        setSelectedWidgets(["To Do List", "Calander"]);
-        // eslint-disable-next-line
-    }, []);
-
     const classes = useStyles();
 
     return (
