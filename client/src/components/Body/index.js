@@ -2,7 +2,7 @@ import { Grid, Paper, makeStyles } from "@material-ui/core";
 import SelectedWidgetsModal from "../SelectWidgetsModal";
 import styles from "./style.module.scss";
 import createPersistedState from "use-persisted-state";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 const useWidgetState = createPersistedState("selectedWidgets");
 
@@ -19,10 +19,10 @@ const useStyles = makeStyles({
 function Body() {
     const [selectedWidgets, setSelectedWidgets] = useWidgetState([]);
 
-    // useEffect(() => {
-    //     setSelectedWidgets(["To Do List", "Calander"]);
-    //     // eslint-disable-next-line
-    // }, []);
+    useEffect(() => {
+        setSelectedWidgets(["To Do List", "Calander"]);
+        // eslint-disable-next-line
+    }, []);
 
     const classes = useStyles();
 
