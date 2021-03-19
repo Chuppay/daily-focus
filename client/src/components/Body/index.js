@@ -22,19 +22,11 @@ function Body(widgets) {
 
     return (
         <div className={styles.gridContainer}>
-<<<<<<< HEAD
             {selectedWidgets.length > 0 ? (
                 <Grid container justify="center" spacing={4} className={classes.grid}>
                     {selectedWidgets.map((value) => (
                         <Grid key={value} item xs={4}>
                             <Paper>{value}</Paper>
-=======
-            {widgets ? (
-                <Grid container spacing={2} className={classes.grid}>
-                    {widgets.map((value) => (
-                        <Grid key={value} item>
-                            <Paper className={classes.paper} />
->>>>>>> deff503... added conditional rednering for no widgets
                         </Grid>
                     ))}
                 </Grid>
@@ -42,7 +34,6 @@ function Body(widgets) {
                 <div className={styles.noWidgetContainer}>
                     <div className={styles.message}>Your focus page is empty</div>
                     <div className={styles.addWidget}>
-<<<<<<< HEAD
                         <SelectedWidgetsModal
                             selectedWidgets={selectedWidgets}
                             setSelectedWidgets={setSelectedWidgets}
@@ -51,18 +42,6 @@ function Body(widgets) {
                 </div>
             )}
             <Grid container spacing={2} className={classes.grid}></Grid>
-=======
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            classes={{ root: classes.root, label: classes.label }}
-                        >
-                            Add Widget
-                        </Button>
-                    </div>
-                </div>
-            )}
->>>>>>> deff503... added conditional rednering for no widgets
         </div>
     );
 }
