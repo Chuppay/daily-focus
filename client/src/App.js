@@ -1,12 +1,17 @@
 import React from "react";
+<<<<<<< HEAD
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 import LandingPage from "./components/LandingPage";
+=======
+import Body from "./components/Body";
+>>>>>>> fdf9c8e... edited styling
 import Header from "./components/Header";
 import "./App.css";
 
 function App() {
     return (
+<<<<<<< HEAD
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
@@ -24,6 +29,12 @@ function App() {
                 </Route>
             </Switch>
         </BrowserRouter>
+=======
+        <div className="App">
+            <Header />
+            <Body />
+        </div>
+>>>>>>> fdf9c8e... edited styling
     );
 }
 
