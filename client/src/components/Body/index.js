@@ -16,8 +16,7 @@ const useStyles = makeStyles({
     },
 });
 
-function Body(widgets) {
-    widgets = null;
+function Body({ selectedWidgets, setSelectedWidgets }) {
     const classes = useStyles();
 
     return (
