@@ -17,7 +17,7 @@ function Body({ selectedWidgets, setSelectedWidgets }) {
 
     return (
         <div className={styles.gridContainer}>
-            {selectedWidgets.length > 0 ? (
+            {selectedWidgets ? (
                 <Grid container justify="center" spacing={4} className={classes.grid}>
                     {selectedWidgets.map((value) => (
                         <Grid key={value} item xs={4}>
