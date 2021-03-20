@@ -14,10 +14,10 @@ const useStyles = makeStyles({
 
 function Body({ selectedWidgets, setSelectedWidgets }) {
     const classes = useStyles();
-
+    console.log(selectedWidgets);
     return (
         <div className={styles.gridContainer}>
-            {selectedWidgets ? (
+            {selectedWidgets && selectedWidgets.length ? (
                 <Grid container justify="center" spacing={4} className={classes.grid}>
                     {selectedWidgets.map((value) => (
                         <Grid key={value} item xs={4}>
