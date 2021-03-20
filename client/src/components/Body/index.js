@@ -1,13 +1,10 @@
-import { Grid, makeStyles, Paper, Button } from "@material-ui/core";
+import { Grid, makeStyles, Paper } from "@material-ui/core";
+import SelectedWidgetsModal from "../SelectWidgetsModal";
+import styles from "./style.module.scss";
 
 const useStyles = makeStyles({
-    root: {
-        background: "#30A0F5",
-        borderRadius: 50,
-        padding: "4px 25px",
-    },
     grid: {
-        padding: "20px 200px",
+        width: "80%",
     },
     label: {
         textTransform: "capitalize",
@@ -15,15 +12,16 @@ const useStyles = makeStyles({
     },
 });
 
-function Body(widgets) {
+function Body({ selectedWidgets, setSelectedWidgets }) {
     const classes = useStyles();
+
     return (
-        <div>
-            {widgets ? (
-                <Grid container spacing={2} className={classes.grid}>
-                    {widgets.map((value) => (
-                        <Grid key={value} item>
-                            <Paper className={classes.paper} />
+        <div className={styles.gridContainer}>
+            {selectedWidgets.length > 0 ? (
+                <Grid container justify="center" spacing={4} className={classes.grid}>
+                    {selectedWidgets.map((value) => (
+                        <Grid key={value} item xs={4}>
+                            <Paper>{value}</Paper>
                         </Grid>
                     ))}
                 </Grid>
@@ -31,13 +29,10 @@ function Body(widgets) {
                 <div className={styles.noWidgetContainer}>
                     <div className={styles.message}>Your focus page is empty</div>
                     <div className={styles.addWidget}>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            classes={{ root: classes.root, label: classes.label }}
-                        >
-                            Add Widget
-                        </Button>
+                        <SelectedWidgetsModal
+                            selectedWidgets={selectedWidgets}
+                            setSelectedWidgets={setSelectedWidgets}
+                        />
                     </div>
                 </div>
             )}
