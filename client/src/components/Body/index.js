@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 function Body({ selectedWidgets, setSelectedWidgets }) {
     const classes = useStyles();
-    console.log(selectedWidgets);
+
     return (
         <div className={styles.gridContainer}>
             {selectedWidgets && selectedWidgets.length ? (
