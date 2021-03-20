@@ -1,14 +1,10 @@
-import { Grid, Paper, makeStyles, Button } from "@material-ui/core";
+import { Grid, Paper, makeStyles } from "@material-ui/core";
+import SelectedWidgetsModal from "../SelectWidgetsModal";
 import styles from "./style.module.scss";
 
 const useStyles = makeStyles({
-    root: {
-        background: "#30A0F5",
-        borderRadius: 50,
-        padding: "4px 25px",
-    },
     grid: {
-        padding: "20px 200px",
+        width: "80%",
     },
     label: {
         textTransform: "capitalize",
@@ -21,7 +17,7 @@ function Body({ selectedWidgets, setSelectedWidgets }) {
 
     return (
         <div className={styles.gridContainer}>
-            {selectedWidgets.length > 0 ? (
+            {selectedWidgets ? (
                 <Grid container justify="center" spacing={4} className={classes.grid}>
                     {selectedWidgets.map((value) => (
                         <Grid key={value} item xs={4}>
@@ -40,7 +36,6 @@ function Body({ selectedWidgets, setSelectedWidgets }) {
                     </div>
                 </div>
             )}
-            <Grid container spacing={2} className={classes.grid}></Grid>
         </div>
     );
 }

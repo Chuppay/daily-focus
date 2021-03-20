@@ -26,7 +26,10 @@ function App() {
                 <Route exact path="/home">
                     {/* Replace following component with actual Home component when created */}
                     <Header />
-                    <Body />
+                    <Body
+                        selectedWidgets={selectedWidgets}
+                        setSelectedWidgets={setSelectedWidgets}
+                    />
                 </Route>
             </Switch>
         </BrowserRouter>
